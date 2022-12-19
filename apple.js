@@ -26,8 +26,8 @@ let afterAfterMovieDesc = document.querySelector(".after-after-movie-desc");
 let counter = 1;
 let movieInterval;
 
-let isPlayPauseBtnClicked = false;
-console.log(typeof(running));
+let isRunning = true;
+
 document.addEventListener("mouseover", locateX);
 
 // start animation when cursor is in target position
@@ -80,6 +80,7 @@ function animateMoviePictures() {
     
 
     movieInterval = setInterval(() => {
+
         beforeImgCont.style.animation = "animate-pic-fly-left 0.6s ease-out forwards";
 
         mainImgCont.style.animation = "animate-pic-fly-left-blur 0.6s ease-out forwards";
@@ -207,18 +208,17 @@ function animateMoviePictures() {
 }
 
 // Pause and Playing animation
-// let playPauseBtn = document.querySelector(".pause-play-btn");
 
 function playPauseAnimation() {
 
-    if (isPlayPauseBtnClicked ? pauseMovie() : playMovie());
+    if (isRunning ? pauseMovie() : playMovie());
 }
 
 function pauseMovie() {
     let playPauseSymbol = document.querySelector(".symbol");
     playPauseSymbol.classList.replace("pause-symbol", "play-symbol");
     
-    isPlayPauseBtnClicked = false;
+    isRunning = false;
 
     beforeImgCont.classList.add("paused");
     mainImgCont.classList.add("paused");
@@ -233,65 +233,6 @@ function playMovie() {
     mainImgCont.classList.remove("paused");
     afterImgCont.classList.remove("paused");
     afterAfterImgCont.classList.remove("paused");
-    isPlayPauseBtnClicked = true;
+    isRunning = true;
 }
 
-
-// function playPauseAnimation() {
-
-//     let playPauseSymbol = document.querySelector(".symbol");
-//     console.log("outside the if " + running);
-//     if (running === true) {
-//         console.log("inside the if " + running);
-//         playPauseSymbol.classList.replace("pause-symbol", "play-symbol");
-
-//         beforeImgCont.classList.remove("before-container");
-//         mainImgCont.classList.remove("main-container");
-//         afterImgCont.classList.remove("after-container");
-//         afterAfterImgCont.classList.remove("after-after-container");
-//         running = false;
-//         clearInterval(movieInterval);
-//     } else {
-//         playPauseSymbol.classList.replace("play-symbol", "pause-symbol");
-
-//         beforeImgCont.classList.add("before-container");
-//         mainImgCont.classList.add("main-container");
-//         afterImgCont.classList.add("after-container");
-//         afterAfterImgCont.classList.add("after-after-container");
-//         running = true;
-//         animateMoviePictures();
-//     }    
-
-
-// }
-
-//     let playPauseSymbol = document.querySelector(".symbol");
-//     console.log("outside the if " + running);
-//     if (running === false) {
-//         console.log("inside the if " + running);
-//         playPauseSymbol.classList.replace("pause-symbol", "play-symbol");
-
-//         beforeImgCont.classList.add("paused");
-//         mainImgCont.classList.add("paused");
-//         mainDescCont.classList.add("paused");
-
-//         afterImgCont.classList.add("paused");
-//         afterDescCont.classList.add("paused");
-
-//         afterAfterImgCont.classList.add("paused");
-        
-//     } else {
-//         playPauseSymbol.classList.replace("play-symbol", "pause-symbol");
-
-//         beforeImgCont.classList.add("running");
-
-//         mainImgCont.classList.add("running");
-//         mainDescCont.classList.add("running");
-
-//         afterImgCont.classList.add("running");
-//         afterDescCont.classList.add("running");
-
-//         afterAfterImgCont.classList.add("running");
-        
-//     }
-// }
