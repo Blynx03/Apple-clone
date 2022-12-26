@@ -34,6 +34,18 @@ document.addEventListener("mouseover", locateX);
 
 
 const movieDesc = {
+    "title": [
+        "emancipation",
+        "slowhorses",
+        "littleamerica",
+        "spirited",
+        "charliebrown",
+        "badsisters",
+        "tedlasso",
+        "prehistoricplanet",
+        "shantaram",
+        "echo3"
+    ],
     "category": [
         "Drama •",
         "Thriller •",
@@ -73,7 +85,7 @@ function locateX() {
 // animating section 5 - movie pictures
 
 function animateMoviePictures() {
-    
+    middotListen();
     let playPauseToggle = document.querySelector(".pause-play-btn");
 
     playPauseToggle.addEventListener("click", playPauseAnimation);
@@ -207,6 +219,19 @@ function animateMoviePictures() {
 
 }
 
+// put function to middots
+// function middotListen () {
+//     let middots = document.querySelectorAll(".middot");
+//     middots.forEach(middot => {
+//         middot.addEventListener("click", (e) => {
+//         // counter = parseInt(e.target.attributes.value);
+//         counter = e.target.attributes.value;
+
+//         console.log(counter);
+//        });
+//     });
+// }
+
 // Pause and Playing animation
 
 function playPauseAnimation() {
@@ -236,3 +261,252 @@ function playMovie() {
     isRunning = true;
 }
 
+
+// Create search link DOM and animation
+
+function appleSearch() {
+    const bodyFilter = document.querySelector("html");
+    bodyFilter.style.animation = "filter-background 1000ms linear forwards";
+    // remove opacity of old navigation bar
+    const oldNav = document.querySelector(".nav-container");
+    oldNav.style.animation = "animate-fade 1000ms linear forwards";
+
+    // create new navigation container and put on top of existing nav bar
+    const newDiv = document.querySelector(".header-container");
+    const searchContainer = document.createElement("div");
+    newDiv.appendChild(searchContainer);
+    searchContainer.classList.add("search-nav-container");
+    searchContainer.style.animation = "animate-focus 1000ms linear forwards",
+                                    "animate-blink 1000ms linear infinite";
+
+    // on the new nav container, make three new containers -- for search logo, search input and exit logo 
+        const container1 = document.createElement("div");
+        const container2 = document.createElement("input");
+        const container3 = document.createElement("div");
+        searchContainer.appendChild(container1);
+        container1.classList.add("search-icon", "search-container2");
+
+        searchContainer.appendChild(container2);
+        container2.classList.add("search-input");
+        container2.setAttribute("type", "text");
+        container2.setAttribute("autofocus", "autofocus");
+
+        // const searchInput = document.createElement("input");
+        // container2.appendChild(searchInput);
+        // searchInput.classList.add("input");
+        container2.setAttribute("placeholder", "Search apple.com/ca");
+        
+        searchContainer.appendChild(container3);
+        container3.classList.add("exit-icon");
+        container3.setAttribute("onclick", 'appleLinks("home")');
+        const x1 = document.createElement("div");
+        const x2 = document.createElement("div");
+        container3.appendChild(x1);
+        x1.classList.add("x1");
+        container3.appendChild(x2);
+        x2.classList.add("x2");
+
+
+    // making search logo using existing search logo to the first container
+        const handle = document.createElement("div");
+        const glass = document.createElement("div");
+        container1.appendChild(glass);
+        glass.classList.add("round-glass2");
+        container1.appendChild(handle);
+        handle.classList.add("handle2");
+
+
+    // search input and exit logo
+}
+   
+
+// url links
+
+function appleLinks(link) {
+    let goToLink;
+    let linkId = true;
+    switch (link) {
+        case "logo": goToLink = "www.apple.com/ca";
+                    break;
+        case "store": goToLink = "www.apple.com/ca/store/";
+                    break;
+        case "mac": goToLink = "www.apple.com/ca/mac/";
+                    break;
+        case "ipad": goToLink = "www.apple.com/ca/ipad/";
+                    break;
+        case "iphone": goToLink = "www.apple.com/ca/iphone/";
+                    break;
+        case "watch": goToLink = "www.apple.com/ca/watch/";
+                    break;
+        case "airpods": goToLink = "www.apple.com/ca/airpods/";
+                    break;
+        case "tv-home": goToLink = "www.apple.com/ca/tv-home/";
+                    break;
+        case "only-on-apple": goToLink = "www.apple.com/ca/services/";
+                    break;
+        case "accessories": goToLink = "www.apple.com/ca/accessories/all/";
+                    break;
+        case "support": goToLink = "www.apple.com/ca/en-ca/";
+                    break;
+        case "home": goToLink = "index.html";
+                    linkId = false;
+                    break;
+        case "iphone14": goToLink = "www.apple.com/ca/iphone-14/"
+                    break;
+        case "sec1-buy": goToLink = "www.apple.com/ca/shop/buy-iphone/iphone-14";
+                    break;
+        case "apple-gift": goToLink = "www.apple.com/ca/shop/gifts";
+                    break;             
+        case "ipad10": goToLink = "www.apple.com/ca/ipad-10.9/";
+                    break;
+        case "watch-series-8": goToLink = "www.apple.com/ca/apple-watch-series-8/";
+                    break;
+        case "watch-ultra": goToLink = "www.apple.com/ca/apple-watch-ultra/";
+                    break;
+        case "macbook-air": goToLink = "www.apple.com/ca/macbook-air/";
+                    break;            
+        case "homepod-mini": goToLink = "www.apple.com/ca/homepod-mini/";
+                    break;
+        case "buy-ultra": goToLink = "www.apple.com/ca/shop/buy-watch/apple-watch-ultra";
+                    break;
+        case "airtag": goToLink = "www.apple.com/ca/airtag/";
+                    break;
+        case "gift-card": goToLink = "www.apple.com/ca/gift-cards";
+                    break;
+
+        // Services 
+        case "music": goToLink = "www.apple/com/ca/apple-music/";
+                    break;
+        case "tv-plus": goToLink = "www.apple.com/ca/apple-tv-plus/";
+                    break;
+        case "fitness": goToLink = "www.apple.com/ca/apple-fitness-plus/";
+                    break;
+        case "news": goToLink = "www.apple.com/ca/apple-news/";
+                    break;
+        case "arcade": goToLink = "www.apple.com/ca/apple-arcade/";
+                    break;
+        case "icloud": goToLink = "www.apple.com/ca/icloud/";
+                    break;
+        case "one": goToLink = "www.apple.com/ca/apple-one/";
+                    break;
+        case "pay": goToLink = "www.apple.com/ca/apple-pay/";
+                    break;
+        case "books": goToLink = "www.apple.com/ca/apple-books/";
+                    break;
+        case "podcast": goToLink = "www.apple.com/ca/apple-podcasts/";
+                    break;
+        case "app-store": goToLink = "www.apple.com/ca/app-store/";
+                    break;
+
+        // Account 
+        case "apple-id": goToLink = "appleid.apple.com/";
+                    break;
+        case "apple-store": goToLink = "www.apple.com/ca/store";
+                    break;
+        case "icloud-website": goToLink = "www.icloud.com/";
+                    break;
+
+        // Apple Store 
+        case "retail": goToLink = "www.apple.com/ca/retail/";
+                    break;
+        case "genius-bar": goToLink = "www.apple.com/ca/geniusbar/";
+                    break;
+        case "today": goToLink = "www.apple.com/ca/today/";
+                    break;
+        case "camp": goToLink = "www.apple.com/ca/today/camp/";
+                    break;
+        case "apple-store-app": goToLink = "www.apple.com/ca/apple-store";
+                    break;
+        case "refurbished": goToLink = "www.apple.com/ca/refurbished";
+                    break;
+        case "financing": goToLink = "www.apple.com/ca/shop/browse/financing";
+                    break;
+        case "trade-in": goToLink = "www.apple.com/ca/trade-in/";
+                    break;
+        case "order-status": goToLink = "www.apple.com/ca/shop/";
+                    break;
+        case "shopping-help": goToLink = "www.apple.com/ca/shop/help/";
+                    break;
+
+        // For Business 
+        case "business": goToLink = "www.apple.com/ca/business/";
+                    break;
+        case "shop-for-business": goToLink = "www.apple.com/ca/retail/business/";
+                    break;
+        case "business-financing": goToLink = "www.apple.com/ca/financing/#business";
+                    break;
+
+        // For Education 
+        case "education": goToLink = "www.apple.com/ca/education/";
+                    break;
+        case "k-12": goToLink = "www.apple.com/ca/education/k12/how-to-buy/";
+                    break;
+        case "university": goToLink = "www.apple.com/ca_edu_93120/store";
+                    break;
+        case "education-financing": goToLink = "www.apple.com/ca/financing/#education/";
+                    break;
+
+        // For Healthcare
+        case "healthcare": goToLink = "www.apple.com/ca/healthcare/";
+                    break;
+        case "health": goToLink = "www.apple.com/ca/healthcare/apple-watch/";
+                    break;
+        case "health-records": goToLink = "www.apple.com/ca/healthcare/health-records/";
+                    break;
+
+
+        // Apple Values
+        case "accessibility": goToLink = "www.apple.com/ca/accessibility/";
+                    break;
+        case "education-initiative": goToLink = "www.apple.com/ca/education-initiative/";
+                    break;
+        case "environment": goToLink = "www.apple.com/ca/environment/";
+                    break;
+        case "privacy": goToLink = "www.apple.com/ca/privacy/";
+                    break;
+        case "responsibility": goToLink = "www.apple.com/ca/supplier-responsibility/";
+                    break;
+
+        // About Apple
+        case "newsroom": goToLink = "www.apple.com/ca/newsroom/";
+                    break;
+        case "leadership": goToLink = "www.apple.com/ca/leadership/";
+                    break;
+        case "opportunities": goToLink = "www.apple.com/careers/ca/";
+                    break;
+        case "investors": goToLink = "investor.apple.com/investor-relations/default.aspx";
+                    break;
+        case "ethics": goToLink = "www.apple.com/compliance/";
+                    break;
+        case "events": goToLink = "www.apple.com/ca/apple-events/";
+                    break;
+        case "contact": goToLink = "www.apple.com/ca/contact/";
+                    break;
+
+        // footer content
+        case "legal-privacy": goToLink = "www.apple.com/ca/legal/privacy/";
+                    break; 
+        case "cookies": goToLink = "www.apple.com/ca/legal/privacy/en-ww/cookies/";
+                    break; 
+        case "terms-of-use": goToLink = "www.apple.com/ca/legal/internet-services/terms/site.html";
+                    break; 
+        case "refunds": goToLink = "www.apple.com/ca/shop/browse/open/salespolicies";
+                    break; 
+        case "legal": goToLink = "www.apple.com/ca/legal/";
+                    break; 
+        case "sitemap": goToLink = "www.apple.com/ca/sitemap/";
+                    break;
+
+        default: goToLink = "www.apple.com/ca"
+
+
+
+    }
+    setTimeout(function() {
+        if (linkId === false) {
+            window.location.href = goToLink;
+        } else {
+            window.location.href = window.location.protocol + "//" + goToLink;
+        }
+    }, 300);
+}

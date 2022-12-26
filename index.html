@@ -16,24 +16,24 @@
 <!-- Header and navigation -->
         <header class="header-container">
             <nav class="nav-container">
-                <img class="nav-apple-logo" src="images/whiteapplelogo.png"/>
+                <img class="nav-apple-logo" onclick='appleLinks("logo")' src="images/whiteapplelogo.png"/>
                 <ul class="nav-list-container">
-                    <li class="list-item">Store</li>
-                    <li class="list-item">Mac</li>
-                    <li class="list-item">iPad</li>
-                    <li class="list-item">iPhone</li>
-                    <li class="list-item">Watch</li>
-                    <li class="list-item">AirPods</li>
-                    <li class="list-item">TV & Home</li>
-                    <li class="list-item">Only on Apple</li>
-                    <li class="list-item">Accessories</li>
-                    <li class="list-item">Support</li>
+                    <li class="list-item store" onclick='appleLinks("store")' >Store</li>
+                    <li class="list-item mac" onclick='appleLinks("mac")'>Mac</li>
+                    <li class="list-item ipad" onclick='appleLinks("ipad")'>iPad</li>
+                    <li class="list-item iphone" onclick='appleLinks("iphone")'>iPhone</li>
+                    <li class="list-item watch" onclick='appleLinks("watch")'>Watch</li>
+                    <li class="list-item airpods" onclick='appleLinks("airpods")'>AirPods</li>
+                    <li class="list-item tv-home" onclick='appleLinks("tv-home")'>TV & Home</li>
+                    <li class="list-item only-on-apple" onclick='appleLinks("only-on-apple")'>Only on Apple</li>
+                    <li class="list-item accessories" onclick='appleLinks("accessories")'>Accessories</li>
+                    <li class="list-item support" onclick='appleLinks("support")'>Support</li>
                 </ul>
-                <div class="magnifying-glass-container">
+                <div class="search-container" onclick="appleSearch()">
                     <div class="round-glass"></div>
                     <div class="handle"></div>
                 </div>
-                <div class="shopping-bag-container">
+                <div class="shopping-bag-container" onclick='appleLinks("support")'>
                     <div class="bag"></div>
                     <div class="bag-string"></div>
                 </div>
@@ -42,18 +42,18 @@
         </header>
 
         <!-- Section 1 -- iPhone 14 -->
-        <section class="section section-1-container iphone">
+        <section class="section section-1-container iphone" onclick='appleLinks("iphone14")'>
             <div class="sec1 section-1-title">iPhone 14</div>
             <div class="sec1 item-description">Big and bigger.</div>
             <div class="sec1 section1-link-container">
-                <div class="sec-link learn-more-link"><a href="#">Learn more ></a></div>
-                <div class="sec-link buy-link"><a href="#">Buy ></a></div>
+                <div class="sec-link learn-more-link"><a onclick='appleLinks("iphone14")'>Learn more ></a></div>
+                <div class="sec-link buy-link" onclick='appleLinks("sec1-buy")'><a onclick='appleLinks("sec1-buy")'>Buy ></a></div>
             </div>
             <img src="images/iphone14.png" alt="picture of iphones" class="iphone-image">
         </section>
 
         <!-- Section 2 -- Apple Gift  -->
-        <section class="section section-2-container gifts">
+        <section class="section section-2-container gifts" onclick='appleLinks("apple-gift")'>
             <img src="images/apple-gift.png" alt="apple gift image" class="apple-gift">
             <div class="sec2 sec2-title">It's wow or never.</div>
             <p class="sec2 sec2-desc">Discover last-minute gifts that will make a lasting impression.</p>
@@ -61,7 +61,7 @@
         </section>
 
         <!-- Section 3 -- iPad  -->
-        <section class="section section-3-container ipad">
+        <section class="section section-3-container ipad" onclick='appleLinks("ipad10")'>
             <img src="images/ipad.png" alt="image of an ipad" class="ipad-image">
             <div class="sec3-desc-container">
                 <div class="sec3 sec3-title">iPad</div>
@@ -75,7 +75,7 @@
 
         <!-- Section 4 -- Apple products -- six pictures  -->
         <section class="section section-4-container apple-items">
-            <div class="image1-wrapper images-wrapper">
+            <div class="image1-wrapper images-wrapper" onclick='appleLinks("iphone14")'>
                 <img src="images/Iphone14Pro.png" alt="image of iphone 14 pro" class="apple-images image1-container">
                 <div class="image1-desc-container images-desc">
                     <div class="img1-title">iPhone 14 Pro</div>
@@ -87,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="image2-wrapper images-wrapper">
+            <div class="image2-wrapper images-wrapper" onclick='appleLinks("airpods")'>
                 <img src="images/airpods.png" alt="airpods image" class="apple-images image2-container">
                 <div class="image2-desc-container images-desc">
                     <div class="img2-logo"><img class="img2-logo" src="images/blackapplelogo.png" /></div>
@@ -97,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="image3-wrapper images-wrapper">
+            <div class="image3-wrapper images-wrapper" onclick='appleLinks("watch-series-8")'>
                 <img src="images/watch1.png" alt="apple watch image" class="apple-images image3-container">
                 <div class="image3-desc-container images-desc">
                     <div class="img3-title">
@@ -112,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="image4-wrapper images-wrapper">
+            <div class="image4-wrapper images-wrapper" onclick='appleLinks("watch-ultra")'>
                 <img src="images/watch2.png" alt="apple watch image" class="apple-images image4-container">
                 <div class="image4-desc-container images-desc">
                     <div class="img4-title">
@@ -122,12 +122,12 @@
                     <div class="img4-desc img-desc">Adventure awaits.</div>
                     <div class="img4-link-container">
                         <div class="sec-link img4-link1 img4-link"><a href="#">Learn more ></a></div>
-                        <div class="sec-link img4-link2 img4-link"><a href="#">Buy ></a></div>
+                        <div class="sec-link img4-link2 img4-link"><a onclick='appleLinks("buy-ultra")'>Buy ></a></div>
                     </div>
                 </div>
             </div>
 
-            <div class="image5-wrapper images-wrapper">
+            <div class="image5-wrapper images-wrapper" onclick='appleLinks("macbook-air")'>
                 <img src="images/macbookair.png" alt="macbook air image" class="apple-images image5-container">
                 <div class="image5-desc-container images-desc">
                     <div class="img5-title">MacBook Air</div>
@@ -142,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="image6-wrapper images-wrapper">
+            <div class="image6-wrapper images-wrapper" onclick='appleLinks("homepod-mini")'>
                 <img src="images/homepod mini.png" alt="homepod mini image" class="apple-images image6-container">
                 <div class="image6-desc-container images-desc">
                     <div class="img6-title">HomePod mini</div>
@@ -234,98 +234,98 @@
                 <div class="col1-container column-container">
                     <div class="label label1">Shop and Learn</div>
                     <ul class="column1 column">
-                        <li class="items">Store</li>
-                        <li class="items">Mac</li>
-                        <li class="items">iPad</li>
-                        <li class="items">iPhone</li>
-                        <li class="items">Watch</li>
-                        <li class="items">AirPods</li>
-                        <li class="items">TV &amp; Home</li>
-                        <li class="items">AirTag</li>
-                        <li class="items">Accessories</li>
-                        <li class="items">Gift Cards</li>
+                        <li class="items" onclick='appleLinks("store")'>Store</li>
+                        <li class="items" onclick='appleLinks("mac")'>Mac</li>
+                        <li class="items" onclick='appleLinks("ipad")'>iPad</li>
+                        <li class="items" onclick='appleLinks("iphone")'>iPhone</li>
+                        <li class="items" onclick='appleLinks("watch")'>Watch</li>
+                        <li class="items" onclick='appleLinks("airpods")'>AirPods</li>
+                        <li class="items" onclick='appleLinks("tv-home")'>TV &amp; Home</li>
+                        <li class="items" onclick='appleLinks("airtag")'>AirTag</li>
+                        <li class="items" onclick='appleLinks("accessories")'>Accessories</li>
+                        <li class="items" onclick='appleLinks("gift-cards")'>Gift Cards</li>
                     </ul>
                 </div>
 
                 <div class="col2-container column-container">
                     <div class="label label2 label2-top">Services</div>
                     <ul class="column2 col2-top column">
-                        <li class="items">Apple Music</li>
-                        <li class="items">Apple TV+</li>
-                        <li class="items">Apple Fitness+</li>
-                        <li class="items">Apple News+</li>
-                        <li class="items">Apple Arcade</li>
-                        <li class="items">iCloud</li>
-                        <li class="items">Apple One</li>
-                        <li class="items">Apple Pay</li>
-                        <li class="items">Apple Books</li>
-                        <li class="items">Apple Podcasts</li>
-                        <li class="items">App Store</li>
+                        <li class="items" onclick='appleLinks("music")'>Apple Music</li>
+                        <li class="items" onclick='appleLinks("tv-plus")'>Apple TV+</li>
+                        <li class="items" onclick='appleLinks("fitness")'>Apple Fitness+</li>
+                        <li class="items" onclick='appleLinks("news")'>Apple News+</li>
+                        <li class="items" onclick='appleLinks("arcade")'>Apple Arcade</li>
+                        <li class="items" onclick='appleLinks("icloud")'>iCloud</li>
+                        <li class="items" onclick='appleLinks("one")'>Apple One</li>
+                        <li class="items" onclick='appleLinks("pay")'>Apple Pay</li>
+                        <li class="items" onclick='appleLinks("books")'>Apple Books</li>
+                        <li class="items" onclick='appleLinks("podcast")'>Apple Podcasts</li>
+                        <li class="items" onclick='appleLinks("app-store")'>App Store</li>
                     </ul>
                     <div class="label label2 label2-bottom">Account</div>
                     <ul class="column2 col2-bottom column">
-                        <li class="items">Manage Your Apple ID</li>
-                        <li class="items">Apple Store Account</li>
-                        <li class="items">iCloud.com</li>
+                        <li class="items" onclick='appleLinks("apple-id")'>Manage Your Apple ID</li>
+                        <li class="items" onclick='appleLinks("apple-store")'>Apple Store Account</li>
+                        <li class="items" onclick='appleLinks("icloud-website")'>iCloud.com</li>
                     </ul>
                 </div>
 
                 <div class="col3-container column-container">
                     <div class="label label3">Apple Store</div>
                     <ul class="column3 column">
-                        <li class="items">Find a Store</li>
-                        <li class="items">Genius Bar</li>
-                        <li class="items">Today at Apple</li>
-                        <li class="items">Apple Camp</li>
-                        <li class="items">Apple Store App</li>
-                        <li class="items">Refurbished and Clearance</li>
-                        <li class="items">Financing</li>
-                        <li class="items">Apple Trade In</li>
-                        <li class="items">Order Status</li>
-                        <li class="items">Shopping Help</li>
+                        <li class="items" onclick='appleLinks("retail")'>Find a Store</li>
+                        <li class="items" onclick='appleLinks("genius-bar")'>Genius Bar</li>
+                        <li class="items" onclick='appleLinks("today")'>Today at Apple</li>
+                        <li class="items" onclick='appleLinks("camp")'>Apple Camp</li>
+                        <li class="items" onclick='appleLinks("apple-store-app")'>Apple Store App</li>
+                        <li class="items" onclick='appleLinks("refurbished")'>Refurbished and Clearance</li>
+                        <li class="items" onclick='appleLinks("financing")'>Financing</li>
+                        <li class="items" onclick='appleLinks("trade-in")'>Apple Trade In</li>
+                        <li class="items" onclick='appleLinks("order-status")'>Order Status</li>
+                        <li class="items" onclick='appleLinks("shopping-help")'>Shopping Help</li>
                     </ul>
                 </div>
 
                 <div class="col4-container column-container">
                     <div class="label label4 label4-top">For Business</div>
                     <ul class="column4 col4-top column">
-                        <li class="items">Apple and Business</li>
-                        <li class="items">Shop for Business</li>
-                        <li class="items">Business Financing</li>
+                        <li class="items" onclick='appleLinks("business")'>Apple and Business</li>
+                        <li class="items" onclick='appleLinks("shop-for-business")'>Shop for Business</li>
+                        <li class="items" onclick='appleLinks("business-financing")'>Business Financing</li>
                     </ul>
                     <div class="label label4 label4-mid">For Education</div>
                     <ul class="column4 col4-mid column">
-                        <li class="items">Apple and Education</li>
-                        <li class="items">Shop for K-12</li>
-                        <li class="items">Shop for University</li>
-                        <li class="items">Education Financing</li>
+                        <li class="items" onclick='appleLinks("education")'>Apple and Education</li>
+                        <li class="items" onclick='appleLinks("k-12")'>Shop for K-12</li>
+                        <li class="items" onclick='appleLinks("university")'>Shop for University</li>
+                        <li class="items" onclick='appleLinks("education-financing")'>Education Financing</li>
                     </ul>
                     <div class="label label4 label-bottom">For Healthcare</div>
                     <ul class="column4 col4-bottom column">
-                        <li class="items">Apple in Healthcare</li>
-                        <li class="items">Health on Apple Watch</li>
-                        <li class="items">Health Records on iPhone</li>
+                        <li class="items" onclick='appleLinks("healthcare")'>Apple in Healthcare</li>
+                        <li class="items" onclick='appleLinks("health")'>Health on Apple Watch</li>
+                        <li class="items" onclick='appleLinks("health-records")'>Health Records on iPhone</li>
                     </ul>
                 </div>
 
                 <div class="col5-container column-container">
                     <div class="label label5 label5-top">Apple Values</div>
                     <ul class="column5 col5-top column">
-                        <li class="items">Accessibility</li>
-                        <li class="items">Education</li>
-                        <li class="items">Environment</li>
-                        <li class="items">Privacy</li>
-                        <li class="items">Supplier Responsibility</li>
+                        <li class="items" onclick='appleLinks("accessibility")'>Accessibility</li>
+                        <li class="items" onclick='appleLinks("education-initiative")'>Education</li>
+                        <li class="items" onclick='appleLinks("environment")'>Environment</li>
+                        <li class="items" onclick='appleLinks("privacy")'>Privacy</li>
+                        <li class="items" onclick='appleLinks("responsibility")'>Supplier Responsibility</li>
                     </ul>
                     <div class="label label5 label5-bottom">About Apple</div>
                     <ul class="column5 col5-bottom column">
-                        <li class="items">Newsroom</li>
-                        <li class="items">Apple Leadership</li>
-                        <li class="items">Career Opportunities</li>
-                        <li class="items">Investors</li>
-                        <li class="items">Ethics &amp; Compliance</li>
-                        <li class="items">Events</li>
-                        <li class="items">Contact Apple</li>
+                        <li class="items" onclick='appleLinks("newsroom")'>Newsroom</li>
+                        <li class="items" onclick='appleLinks("leadership")'>Apple Leadership</li>
+                        <li class="items" onclick='appleLinks("opportunities")'>Career Opportunities</li>
+                        <li class="items" onclick='appleLinks("investors")'>Investors</li>
+                        <li class="items" onclick='appleLinks("ethics")'>Ethics &amp; Compliance</li>
+                        <li class="items" onclick='appleLinks("events")'>Events</li>
+                        <li class="items" onclick='appleLinks("contact")'>Contact Apple</li>
                     </ul>
                 </div>
             </div> <!-- End of mid-container -->
@@ -334,9 +334,9 @@
             <div class="bottom-info-container">
                 <div class="top-footer-container">
                     <span class="top-footer top-footer1">More ways to shop&colon; </span>
-                    <span class="top-footer top-footer2"><a href="#" class="app-store-link">Find an Apple Store</a></span>
+                    <span class="top-footer top-footer2" onclick='appleLinks("retail")'><a href="#" class="app-store-link">Find an Apple Store</a></span>
                     <span class="top-footer top-footer3"> or </span>
-                    <span class="top-footer top-footer4"><a href="#" class="retailer-link">other retailer</a></span>
+                    <span class="top-footer top-footer4" onclick='appleLinks("support")'><a href="#" class="retailer-link">other retailer</a></span>
                     <span class="top-footer top-footer5"> near you. Or call 1-800-MY-APPLE.</span>
                 </div>
                 <div class="mid-footer-container">
@@ -348,12 +348,12 @@
                 </div>
                 <div class="bottom-footer-container">
                     <ul class="bottom-footer">
-                        <li class="bottom-footer-content">Privacy Policy</li>
-                        <li class="bottom-footer-content">Use of Cookies</li>
-                        <li class="bottom-footer-content">Terms of Use</li>
-                        <li class="bottom-footer-content">Sales and Refunds</li>
-                        <li class="bottom-footer-content">Legal</li>
-                        <li class="bottom-footer-content last-footer-content">Site Map</li>
+                        <li class="bottom-footer-content" onclick='appleLinks("legal-privacy")'>Privacy Policy</li>
+                        <li class="bottom-footer-content" onclick='appleLinks("cookies")'>Use of Cookies</li>
+                        <li class="bottom-footer-content" onclick='appleLinks("terms-of-use")'>Terms of Use</li>
+                        <li class="bottom-footer-content" onclick='appleLinks("refunds")'>Sales and Refunds</li>
+                        <li class="bottom-footer-content" onclick='appleLinks("legal")'>Legal</li>
+                        <li class="bottom-footer-content last-footer-content" onclick='appleLinks("sitemap")'>Site Map</li>
                     </ul>
                 </div>
             </div>

@@ -42,6 +42,7 @@ body {
     justify-content: center;
 }
 
+
 .nav-apple-logo {
     width: 13px;
     height: 16px;
@@ -70,7 +71,7 @@ body {
     cursor: pointer;
 }
 
-.magnifying-glass-container, .shopping-bag-container {
+.search-container, .search-container2, .shopping-bag-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -79,7 +80,7 @@ body {
     position: relative;
 }
 
-.round-glass {
+.round-glass, .round-glass2 {
     position: absolute;
     top: 14px;
     left: 25px;
@@ -90,7 +91,15 @@ body {
     border: 1px solid #fbfbfd;
 }
 
-.handle {
+.round-glass2 {
+    border: 1px solid #9f9fa0;
+}
+
+.round-glass, .round-glass2, .handle, .handle2 {
+    cursor: pointer;
+}
+
+.handle, .handle2 {
     position: absolute;
     top: 25.25px;
     left: 33px;
@@ -98,6 +107,26 @@ body {
     height: 1px;
     background: #fbfbfd;
     transform: rotate(48deg);
+}
+
+.x1, .x2 {
+    width: 19px;
+    height: 1px;
+    background-color: #9f9fa0;
+    position: absolute;
+}
+
+.x1 {
+    transform: rotate(45deg);
+}
+
+.x2 {
+    transform: rotate(-45deg);
+}
+
+
+.handle2 {
+    background: #9f9fa0;
 }
 
 .bag {
@@ -122,6 +151,82 @@ body {
     position: absolute;
     top: 13px;
     left: 25.5px;
+}
+
+.bag, .bag-string {
+    cursor: pointer;
+}
+
+/* changing nav when search is clicked */
+.search-nav-container {
+    position: fixed;
+    top: 0;
+    left: calc((100% - 700px)/2);
+    width: 700px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-areas: "search", "input", "exit";
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    grid-area: "search";
+}
+
+.search-input {
+    grid-area: "input";
+    color: #fbfbfd;
+    border: none;
+    height: 95%;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.exit-icon {
+    grid-area: "exit";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@keyframes filter-background {
+    100% {
+        filter: brightness(70%);
+    }
+}
+
+@keyframes animate-fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animate-focus {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate-blink {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
 }
 
 .section-1-container {
@@ -280,6 +385,7 @@ a:hover {
     justify-content: center;
     position: relative;
     align-items: center;
+    cursor: pointer;
 }
 
 .image1-wrapper {
@@ -848,7 +954,14 @@ button {
     .section-4-container {
         height: 1500px;
         column-gap: 13px;
+        position: relative;
     }
+
+    .apple-images {
+        position: absolute;
+        top: 10px;
+    }
+
     .images-wrapper {
         height: 50.75vh;
     }
@@ -918,7 +1031,7 @@ button {
         bottom: 5%;
     }
     .stream-btn {
-        width: 155px;
+        min-width: 155px;
         letter-spacing: 0.4px;
     }
 
@@ -954,6 +1067,9 @@ button {
     }
 
 }
+
+
+
 
 /* 
 @media only screen and (max-width: 734px) {
