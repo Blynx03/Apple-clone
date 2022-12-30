@@ -25,6 +25,7 @@ let afterAfterCategory = document.querySelector(".after-after-category");
 let afterAfterMovieDesc = document.querySelector(".after-after-movie-desc");
 let counter = 1;
 let movieInterval;
+let oldMiddotCounter;
 
 let isRunning = true;
 
@@ -220,17 +221,66 @@ function animateMoviePictures() {
 }
 
 // put function to middots
-// function middotListen () {
-//     let middots = document.querySelectorAll(".middot");
-//     middots.forEach(middot => {
-//         middot.addEventListener("click", (e) => {
-//         // counter = parseInt(e.target.attributes.value);
-//         counter = e.target.attributes.value;
+function middotListen() {
+    let middots = document.querySelectorAll(".middot");
+    middots.forEach(middot => {
+        middot.addEventListener("click", (e) => {
+        // counter = parseInt(e.target.attributes.value);
+        oldMiddotCounter = counter;
+        counter = Number(e.target.attributes.value.value);
+        console.log(e);
+        console.log("new counter is " + counter);
+        document.querySelector(".middot" + (oldMiddotCounter)).style.color = "lightgrey";
+        document.querySelector(".middot" + counter).style.color = "gray";
+        middotClicked();
+       });
+    });
+}
 
-//         console.log(counter);
-//        });
-//     });
-// }
+function middotClicked() {
+    let playPauseSymbol = document.querySelector(".symbol");
+    playPauseSymbol.classList.replace("pause-symbol", "play-symbol");
+    
+    isRunning = false;
+
+    if (counter < oldMiddotCounter) {
+        setTimeout(() => {
+            beforeImgCont.style.animation = "animate-pic-fly-left 0.1s ease-out forwards";
+
+            mainImgCont.style.animation = "animate-pic-fly-left-blur 0.1s ease-out forwards";
+            mainDescCont.style.animation = "animate-btn-desc-container-blur 0.6s ease-out forwards";
+    
+            afterImgCont.style.animation = "animate-pic-fly-left-focus 0.1s ease-out forwards";
+            afterDescCont.style.animation = "animate-btn-desc-container-focus 0.6s ease-out forwards";
+    
+            afterAfterImgCont.style.animation = "animate-pic-fly-left-blur 0.1s ease-out forwards";
+            console.log("counter = " + counter);
+
+            while (oldMiddotCounter != counter) {
+                beforeImg.src = "images/movie-image" + (oldMiddotCounter - 1) + ".png";
+                beforeCategory.textContent = movieDesc.category[oldMiddotCounter - 2];
+                beforeMovieDesc.textContent = movieDesc.description[oldMiddotCounter - 2];
+                
+                mainImg.src = "images/movie-image" + (oldMiddotCounter) + ".png";
+                mainCategory.textContent = movieDesc.category[oldMiddotCounter - 1];
+                mainMovieDesc.textContent = movieDesc.description[oldMiddotCounter - 1];                
+    
+                afterImg.src = "images/movie-image" + (oldMiddotCounter + 1) + ".png";
+                afterCategory.textContent = movieDesc.category[oldMiddotCounter];
+                afterMovieDesc.textContent = movieDesc.description[oldMiddotCounter];
+    
+                afterAfterImg.src = "images/movie-image" + (oldMiddotCounter + 2) + ".png";
+                afterAfterCategory.textContent = movieDesc.category[oldMiddotCounter + 1];
+                afterAfterMovieDesc.textContent = movieDesc.description[oldMiddotCounter + 1];
+    
+                document.querySelector(".middot" + oldMiddotCounter).style.color = "gray";
+                document.querySelector(".middot" + (oldMiddotCounter + 1)).style.color = "lightgrey";
+    
+                oldMiddotCounter--;
+            }
+        }, 300);
+    }
+}
 
 // Pause and Playing animation
 
@@ -244,21 +294,34 @@ function pauseMovie() {
     playPauseSymbol.classList.replace("pause-symbol", "play-symbol");
     
     isRunning = false;
+    console.log("pauseMovie is clicked. is running = " + isRunning)
 
-    beforeImgCont.classList.add("paused");
-    mainImgCont.classList.add("paused");
-    afterImgCont.classList.add("paused");
-    afterAfterImgCont.classList.add("paused");
+    // freeze animation
+    clearInterval(movieInterval);
+
+    // beforeImgCont.style.animationPlayState = "paused";
+    // mainImgCont.style.animationPlayState = "paused";
+    // afterImgCont.style.animationPlayState = "paused";
+    // afterAfterImgCont.style.animationPlayState = "paused";
+
+    // beforeImgCont.classList.add("paused");
+    // mainImgCont.classList.add("paused");
+    // afterImgCont.classList.add("paused");
+    // afterAfterImgCont.classList.add("paused");
 }
 
 function playMovie() {
     let playPauseSymbol = document.querySelector(".symbol");
     playPauseSymbol.classList.replace("play-symbol", "pause-symbol");
-    beforeImgCont.classList.remove("paused");
-    mainImgCont.classList.remove("paused");
-    afterImgCont.classList.remove("paused");
-    afterAfterImgCont.classList.remove("paused");
+
+
+    // beforeImgCont.classList.remove("paused");
+    // mainImgCont.classList.remove("paused");
+    // afterImgCont.classList.remove("paused");
+    // afterAfterImgCont.classList.remove("paused");
     isRunning = true;
+    animateMoviePictures();
+
 }
 
 
