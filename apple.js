@@ -295,30 +295,14 @@ function pauseMovie() {
     
     isRunning = false;
     console.log("pauseMovie is clicked. is running = " + isRunning)
-
-    // freeze animation
     clearInterval(movieInterval);
 
-    // beforeImgCont.style.animationPlayState = "paused";
-    // mainImgCont.style.animationPlayState = "paused";
-    // afterImgCont.style.animationPlayState = "paused";
-    // afterAfterImgCont.style.animationPlayState = "paused";
-
-    // beforeImgCont.classList.add("paused");
-    // mainImgCont.classList.add("paused");
-    // afterImgCont.classList.add("paused");
-    // afterAfterImgCont.classList.add("paused");
 }
 
 function playMovie() {
     let playPauseSymbol = document.querySelector(".symbol");
     playPauseSymbol.classList.replace("play-symbol", "pause-symbol");
 
-
-    // beforeImgCont.classList.remove("paused");
-    // mainImgCont.classList.remove("paused");
-    // afterImgCont.classList.remove("paused");
-    // afterAfterImgCont.classList.remove("paused");
     isRunning = true;
     animateMoviePictures();
 
@@ -354,9 +338,6 @@ function appleSearch() {
         container2.setAttribute("type", "text");
         container2.setAttribute("autofocus", "autofocus");
 
-        // const searchInput = document.createElement("input");
-        // container2.appendChild(searchInput);
-        // searchInput.classList.add("input");
         container2.setAttribute("placeholder", "Search apple.com/ca");
         
         searchContainer.appendChild(container3);
