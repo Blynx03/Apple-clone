@@ -161,8 +161,8 @@ body {
 .search-nav-container {
     position: fixed;
     top: 0;
-    left: calc((100% - 700px)/2);
-    width: 700px;
+    left: calc((100% - 70%)/2);
+    width: 70%;
     height: 100%;
     display: grid;
     grid-template-columns: 0.1fr 1fr 0.1fr;
@@ -294,7 +294,7 @@ a:hover {
 
 
 .apple-gift {
-    width: 530px;
+    width: 33%;
     position: absolute;
 }
 
@@ -310,7 +310,7 @@ a:hover {
 }
 
 .sec2-desc {
-    width: 500px;
+    width: 30%;
     bottom: 71px;
     font-weight: 300;
     text-align: center;
@@ -327,7 +327,7 @@ a:hover {
 
 
 .section-3-container {
-    height: 715px;
+    height: 850px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -336,7 +336,7 @@ a:hover {
 }
 
 .ipad-image {
-    width: 700px;
+    width: 43%;
     object-fit: contain;
     z-index: -1;
     margin-left: -100px;
@@ -344,12 +344,12 @@ a:hover {
 
 .sec3-desc-container {
     display: flex;
-    width: 400px;
+    width: 35%;
     height: 200px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: -250px;
+    margin-left: -170px;
 }
 
 .sec3-title {
@@ -790,7 +790,7 @@ button {
 .upper-info-container {
     /* position: absolute; */
     display: flex;
-    width: 980px;
+    width: 60%;
     border-bottom: 1px solid #d2d2d7;
     padding-bottom: 10px;
     font-size: 12.5px;
@@ -800,7 +800,7 @@ button {
 .middle-info-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 980px;
+    width: 60%;
     padding-top: 20px;
     justify-content: space-between;
 }
@@ -845,7 +845,7 @@ button {
 
 .bottom-info-container {
     margin-top: 28px;
-    width: 980px;
+    width: 60%;
     font-size: 12px;
     color: #9f9fa0;
 }
@@ -872,6 +872,10 @@ button {
 .english:hover, .french:hover, .bottom-footer-content:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+.app-store-link:hover, .retailer-link:hover {
+    cursor: pointer;
 }
 
 .mid-footer-right-container {
@@ -904,6 +908,8 @@ button {
     list-style: none;
 }
 
+
+
 @media only screen and (max-width: 1068px) {
     .section-1-container {
         height: 703px;
@@ -932,9 +938,13 @@ button {
        top: 20px;
     }
     .sec2-title {
-        font-size: 47px;
+        font-size: 4rem;
     }
 
+    .sec2-desc {
+        font-size: 23px;
+        width: 40%;
+    }
     .section-3-container {
         height: 657px;
     }
@@ -1070,32 +1080,280 @@ button {
 
 
 
+@media only screen and (max-width: 390px) {
 
-/* 
-@media only screen and (max-width: 734px) {
-    .page-container {
-
-    }
-    .header-container {
-        height: 48px;
-    }
-    .nav-container {
-        position: relative;
+    html, body {
         width: 100vw;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 0.5fr 9fr 0.5fr;
-        grid-template-areas: "hamburger" "apple-logo" "shopping-bag";
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+  .header-container {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 7%;
+    background: transparent;
+  }
+
+    .nav-container {
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(180%) blur(20px);
+        
+        height: 7vh;
+        width: 100vw;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-areas: "burger logo bag";
+        /* display: flex; */
+        justify-content: center;
+
+    }
+   
+    .nav-list-container {
+        display: none;
+    }
+
+    /* .nav-list-container > li {
+        display: none;
+    } */
+
+    .nav-apple-logo {
+        width: 15px;
+        height: 18px;
+        grid-area: logo;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .nav-apple-logo {
+    .search-container {
+        grid-area: burger;
         display: flex;
-
-        grid-area: "apple-logo";
+        justify-content: center;
+        align-items: center;
     }
 
+    .shopping-bag-container {
+        grid-area: bag;
+    }
 
+    .bag, .bag-string {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        left: 10%;
+    }
 
-} */
+    .bag-string {
+        left: 20%;
+    }
+
+    .round-glass, .handle {
+        width: 15px;
+        height: 1.2px;
+        background: #f5f5f7;
+        border: none;
+        left: 50%;
+    }
+
+    .round-glass {
+        margin-top: 5px;
+    }
+    .handle {
+        transform: rotate(0deg);
+    }
+
+    .section-1-container {
+        height: 570px;
+    }
+
+    .section-1-title {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    .item-description {
+        font-size: 1.2rem;
+    }
+
+    .section1-link-container {
+        gap: 35px;
+    }
+
+    .iphone-image {
+        width: 100vw;
+        height:58vh;
+        object-fit: cover;
+        top: 130px;
+        z-index: -1;
+    }
+
+    .apple-gift {
+        width: 100%;
+    }
+
+    .sec2-desc {
+        width: 75%;
+        font-size: 1.3rem;
+    }
+
+    .sec2-title {
+        font-size: 2.5rem;
+    }
+
+    .section-3-container {
+        height: 500px;
+    }
+
+    .sec3-title {
+        width: 50%;
+        position: absolute;
+        top: 50px;
+        left: 40%;
+        font-size: 2.1rem;
+    }
+
+    .sec3-desc-container {
+        width: 90%;
+        justify-content: center;
+        /* position: absolute; */
+        margin-top: -260px;
+        margin-left: 0;
+    }
+
+    .sec-link {
+        padding-top: 5px;
+    }
+
+    .sec3-desc {
+        font-size: 1.15rem;
+        font-weight: 400;
+    }
+
+    .ipad-image {
+        width: 90vw;
+        position: absolute;
+        bottom: 0%;
+        left: 30%;
+    }
+
+    .images-wrapper {
+        width: 100vw;
+    }
+
+    .movie-picture {
+        width: 70vw;
+        right: 85%;
+    }
+
+    .section-5-container {
+        height: 70vh;
+    }
+
+    .movie-images-container {
+        justify-content: center;
+    }
+
+    .button-desc-container {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        grid-template-areas: "movie-cat" "desc" "stream-button";
+        grid-template-rows: 0 40px 50px;
+        position: absolute;
+        left: -225px;
+    }
+
+    .stream-btn, .after-stream-btn {
+        height: 50px;
+        border-radius: 25px;
+        grid-area: stream-button;
+        justify-self: center;
+    }
+
+    .main-category, .before-category, .after-category {
+        font-size: 16px;
+        justify-self: center;
+        padding: 0;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .movie-desc {
+        font-size: 4vw;
+        justify-self: center;
+    }
+
+    .movie-nav-container {
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+    }
+
+    .middot1 {
+        padding-left: 60px;
+    }
+
+    .pause-play-btn-container {
+        width: 50%;
+    }
+
+    .upper-info-container {
+        width: 90%;
+    }
+
+    .section-6-container {
+        height: 350px;
+    }
+
+    .middle-info-container {
+        display: none;
+        /* grid-template-columns: 1fr 1fr;
+        width: 60%;
+        padding-top: 20px;
+        justify-content: space-between; */
+    }
+    
+    .bottom-info-container {
+        width: 90%;
+    }
+
+    .top-footer-container {
+        line-height: 18px;
+    }
+
+    .bottom-footer {
+        display: grid;
+        grid-template-areas: "policy cookies terms"
+                            "sales legal map";
+        line-height: 18px;
+    }
+
+    .policy {
+        grid-area: policy;
+    }
+
+    .cookies {
+        grid-area: cookies;
+    }
+
+    .terms {
+        grid-area: terms;
+    }
+
+    .sales {
+        grid-area: sales;
+    }
+
+    .legal {
+        grid-area: legal;
+    }
+
+    .map {
+        grid-area: map;
+    }
+
+}

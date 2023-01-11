@@ -192,6 +192,7 @@ function animateMoviePictures() {
 
                 document.querySelector(".middot" + counter).style.color = "gray";
                 document.querySelector(".middot" + (counter-1)).style.color = "lightgrey";
+
             }
             if (counter === 5) {
                 mainCategory.style.textShadow = "0 0 10px black";
