@@ -394,34 +394,34 @@ function appleLinks(link) {
                     break;
         case "only-on-apple": goToLink = "www.apple.com/ca/services/";
                     break;
-        case "accessories": goToLink = "www.apple.com/ca/accessories/all/";
+        case "accessories": goToLink = "www.apple.com/ca/accessories/all";
                     break;
         case "support": goToLink = "www.apple.com/ca/en-ca/";
                     break;
         case "home": goToLink = "index.html";
                     linkId = false;
                     break;
-        case "iphone14": goToLink = "www.apple.com/ca/iphone-14/"
+        case "iphone14": goToLink = "www.apple.com/ca/iphone-15-pro/"
                     break;
-        case "sec1-buy": goToLink = "www.apple.com/ca/shop/buy-iphone/iphone-14";
+        case "sec1-buy": goToLink = "www.apple.com/ca/shop/buy-iphone/iphone-15-pro";
                     break;
         case "apple-gift": goToLink = "www.apple.com/ca/shop/gifts";
                     break;             
-        case "ipad10": goToLink = "www.apple.com/ca/ipad-10.9/";
+        case "ipad10": goToLink = "www.apple.com/ca/ipad/";
                     break;
-        case "watch-series-8": goToLink = "www.apple.com/ca/apple-watch-series-8/";
+        case "watch-series-8": goToLink = "www.apple.com/ca/watch/";
                     break;
-        case "watch-ultra": goToLink = "www.apple.com/ca/apple-watch-ultra/";
+        case "watch-ultra": goToLink = "www.apple.com/ca/apple-watch-ultra-2/";
                     break;
         case "macbook-air": goToLink = "www.apple.com/ca/macbook-air/";
                     break;            
-        case "homepod-mini": goToLink = "www.apple.com/ca/homepod-mini/";
+        case "homepod-mini": goToLink = "https://www.apple.com/ca/shop/buy-homepod/homepod-mini/space-grey?fnode=b6a649b6a99bbd7a6ca9cac6609bbe2fc1deda3113b241859b316d41c9a42444293b416bee43760874178a65f16f34ae8c85aa1f82a106705ef0ad1eda3a0d7c85a892bb97eb5266f57c282fea228f1dcd8092590c8a1d54640b23cc6627ace9";
                     break;
         case "buy-ultra": goToLink = "www.apple.com/ca/shop/buy-watch/apple-watch-ultra";
                     break;
-        case "airtag": goToLink = "www.apple.com/ca/airtag/";
+        case "airtag": goToLink = "https://www.apple.com/ca/shop/buy-airtag/airtag/4-pack?fnode=4485d07fc12371a7dfb6062e094bc6332686c57c32bb2727e11c00e77baa6b51c526ff63b131efe23028007d2adba8e9c62831a3a3c10292622b56cd8ba225c1fd0881a9614761b38fef6746f62d8a75c6a9ce8fdd7ba80178f1f03176175c5b";
                     break;
-        case "gift-card": goToLink = "www.apple.com/ca/gift-cards";
+        case "gift-card": goToLink = "www.apple.com/ca/shop/gift-cards";
                     break;
 
         // Services 
@@ -435,7 +435,7 @@ function appleLinks(link) {
                     break;
         case "arcade": goToLink = "www.apple.com/ca/apple-arcade/";
                     break;
-        case "icloud": goToLink = "www.apple.com/ca/icloud/";
+        case "icloud": goToLink = "https://www.icloud.com/";
                     break;
         case "one": goToLink = "www.apple.com/ca/apple-one/";
                     break;
@@ -465,7 +465,7 @@ function appleLinks(link) {
                     break;
         case "camp": goToLink = "www.apple.com/ca/today/camp/";
                     break;
-        case "apple-store-app": goToLink = "www.apple.com/ca/apple-store";
+        case "apple-store-app": goToLink = "https://apps.apple.com/ca/app/apple-store/id375380948";
                     break;
         case "refurbished": goToLink = "www.apple.com/ca/refurbished";
                     break;
@@ -489,7 +489,7 @@ function appleLinks(link) {
         // For Education 
         case "education": goToLink = "www.apple.com/ca/education/";
                     break;
-        case "k-12": goToLink = "www.apple.com/ca/education/k12/how-to-buy/";
+        case "k-12": goToLink = "www.apple.com/ca/education/k12/#how-to-buy/";
                     break;
         case "university": goToLink = "www.apple.com/ca_edu_93120/store";
                     break;

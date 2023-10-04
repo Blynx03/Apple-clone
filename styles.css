@@ -1,7 +1,15 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 0;
     background: #fbfbfd;
+    box-sizing: border-box;
     /* height: 630vh; */
 }
 
@@ -12,16 +20,18 @@ body {
     width: 100vw;
     height: 3000;
     position: relative;
+    overflow: hidden;
 }
 
 .header-container {
+    width: 100%;
     background: rgba(0,0,0,0.8);
-    backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(3px);
     height: 44px;
     justify-content: center;
     z-index: 1;
     position: fixed;
-    display: block;
+    /* display: block; */
 }
 
 .header-container, .section {
@@ -231,13 +241,20 @@ body {
 
 .section-1-container {
     position: relative;
+    width: 100vw;
     height: 748px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     align-items: center;
-    top: 45px;
+    top: 0px;
+    object-fit: fill;
+    padding-top: 40px;
+    background-color: black;
+    overflow: hidden;
+    z-index: -5;
 }
+
 
 .section-1-title {
     margin-top: 52px;
@@ -245,11 +262,13 @@ body {
     font-weight: 500;
     justify-content: center;
     letter-spacing: -0.5px;
+    color: white;
 }
 
 .item-description {
     font-size: 28px;
     padding: 1.5px;
+    color: white;
 }
 
 .section1-link-container {
@@ -276,20 +295,21 @@ a:hover {
 }
 
 .iphone-image {
-    width: 510px;
+    width: 100vw;
     object-fit: contain;
     position: absolute;
-    bottom: 50px;
+    bottom: 200px;
+    transform: scale(2);
+    z-index: -2;
 }
 
 
 .section-2-container {
     align-items: center;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
     cursor: pointer;
-    background-color: rgb(4, 0, 43);
-    height: 691px;
+    height: 850px;
 }
 
 
@@ -298,18 +318,18 @@ a:hover {
     position: absolute;
 }
 
-.sec2 {
+.sec3 {
     color: rgb(245, 241, 239);
     position: absolute;
     font-size: 26px;
 }
 
-.sec2-title {
+.sec3-title {
     bottom: 160px;
     font-size: 56px;
 }
 
-.sec2-desc {
+.sec3-desc {
     width: 30%;
     bottom: 71px;
     font-weight: 300;
@@ -321,18 +341,19 @@ a:hover {
     bottom: 52px;
 }
 
-.sec2-link {
+.sec3-link {
     color: #2997ff;
 }
 
 
 .section-3-container {
-    height: 850px;
-    align-items: center;
+    height: 691px;
     justify-content: center;
     display: flex;
     cursor: pointer;
     position: relative;
+    background-color: rgb(4, 0, 43);
+
 }
 
 .ipad-image {
@@ -342,7 +363,7 @@ a:hover {
     margin-left: -100px;
 }
 
-.sec3-desc-container {
+.sec2-desc-container {
     display: flex;
     width: 35%;
     height: 200px;
@@ -352,25 +373,25 @@ a:hover {
     margin-left: -170px;
 }
 
-.sec3-title {
+.sec2-title {
     font-size: 54px;
     font-weight: 500;
     padding-bottom: 12px;
 }
 
-.sec3-desc {
+.sec2-desc {
     font-size: 26px;
     font-weight: 100px;
 }
 
-.sec3-link-container {
+.sec2-link-container {
     display: flex;
     gap: 40px;
     padding: 0;
 }
 
 .section-4-container {
-    width: 97.5vw;
+    width: 100vw;
     height: 1780px;
     display: grid;
     grid-template-areas: "image1 image2" "image3 image4" "image5 image6";
@@ -380,12 +401,13 @@ a:hover {
 
 .images-wrapper {
     width: 100%;
-    height: 60vh;
+    height: 58vh;
     display: flex;
     justify-content: center;
     position: relative;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .image1-wrapper {
@@ -416,9 +438,9 @@ a:hover {
 .apple-images {
     width: 100%;
     height: 100%;
-    object-fit: none;
     z-index: -1;
     position: absolute;
+    transform: scale(1);
 }
 
 .images-desc {
@@ -432,19 +454,33 @@ a:hover {
 }
 
 .img1-title {
-    color: #fbfbfd;
+    color: black;
     font-size: 40px;
+    text-shadow: 1px 1px 2px white, 0 0 10px white;
 }
 
 .img1-desc {
-    color: #fbfbfd;
-    font-size: 22px;
+    color: black;
+    text-shadow: 1px 1px 2px white, 0 0 5px white;
+    font-size: 20px;
     font-weight: 300;
 }
+
+.image1-container {
+}
+
+.image1-desc-container {
+    width: 50%;
+}
+
 
 .img1-link-container, .img3-link-container, .img4-link-container, .img5-link-container, .img6-link-container {
     display: flex;
     gap: 40px;
+}
+
+.img1-link-container {
+    text-shadow: 1px 1px 2px black, 0 0 7px white;
 }
 
 .img1-link, .img2-link, .img3-link, .img4-link, .img5-link, .img6-link {
@@ -974,6 +1010,7 @@ button {
 
     .images-wrapper {
         height: 50.75vh;
+        overflow: hidden;
     }
     .img1-title {
         top: 4px;
@@ -988,8 +1025,9 @@ button {
         padding-top: 13px;
     }
     .apple-images {
-        object-fit: cover;
-        height: 490px;
+        /* height: 490px; */
+        height: 100%;
+        width: 100%;
     }
     .images-desc{
         top: 38px;
@@ -1186,51 +1224,73 @@ button {
     .iphone-image {
         width: 100vw;
         height:58vh;
-        object-fit: cover;
-        top: 130px;
+        top: 160px;
+        left: 28px;
+        transform: rotate(90deg);
+        scale: 2.5;
         z-index: -1;
+    }
+
+    .section-1-title {
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    .item-description {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .sec-link {
+        color: #67b3fa;
+        font-size: 18px;
     }
 
     .apple-gift {
         width: 100%;
     }
 
-    .sec2-desc {
+    .sec3-desc {
         width: 75%;
         font-size: 1.3rem;
     }
 
-    .sec2-title {
+    .sec3-title {
         font-size: 2.5rem;
     }
 
-    .section-3-container {
+    .section-2-container {
         height: 500px;
     }
 
-    .sec3-title {
-        width: 50%;
-        position: absolute;
-        top: 50px;
-        left: 40%;
-        font-size: 2.1rem;
-    }
-
-    .sec3-desc-container {
+    .sec2-desc-container {
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        /* position: absolute; */
         margin-top: -260px;
         margin-left: 0;
     }
+
+    .sec2-title {
+        position: absolute;
+        top: 50px;
+        font-size: 2.1rem;
+    }
+
+  
 
     .sec-link {
         padding-top: 5px;
     }
 
-    .sec3-desc {
+    .sec2-desc {
         font-size: 1.15rem;
         font-weight: 400;
+        width: 100%;
+        white-space: nowrap;
+        text-align: center;
     }
 
     .ipad-image {
@@ -1240,8 +1300,46 @@ button {
         left: 30%;
     }
 
-    .images-wrapper {
+    .section-4-container {
         width: 100vw;
+        margin-left: -13px;
+        display: flex;
+        flex-direction: column;
+        height: 1900px;
+    }
+
+    .images-wrapper {
+        position: relative;
+        width: 100vw;
+    }
+
+    .images-desc {
+        position: absolute;
+        top: 10px;
+        width: 80%;
+        height: 40%;
+    }
+
+    .img1-title {
+        font-size: 26px;
+        margin-left: 130px;
+    }
+
+    .img1-desc {
+        font-size: 14px;
+        margin-left: 60px;
+        text-shadow: -2px -2px 4px white, 0 0 10px white;
+    }
+
+    .img1-link-container {
+        margin-top: 20px;
+        margin-left: 150px;
+        gap: 10px;
+    }
+
+    .img1-link {
+        font-size: 16px;
+        text-shadow: 1px 1px 2px black, 0 0 2px white;
     }
 
     .movie-picture {
@@ -1255,6 +1353,8 @@ button {
 
     .movie-images-container {
         justify-content: center;
+        height: 60vh;
+        /* object-fit: cover; */
     }
 
     .button-desc-container {
@@ -1283,6 +1383,10 @@ button {
         align-items: center; */
     }
 
+    .movie-picture {
+        object-fit: cover;
+        
+    }
     .movie-desc {
         font-size: 4vw;
         justify-self: center;
