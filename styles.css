@@ -466,9 +466,6 @@ a:hover {
     font-weight: 300;
 }
 
-.image1-container {
-}
-
 .image1-desc-container {
     width: 50%;
 }
@@ -479,16 +476,12 @@ a:hover {
     gap: 40px;
 }
 
-.img1-link-container {
-    text-shadow: 1px 1px 2px black, 0 0 7px white;
-}
-
 .img1-link, .img2-link, .img3-link, .img4-link, .img5-link, .img6-link {
     font-size: 17px;
 }
 
 .img1-link a, .img3-link a {
-    color: #2997ff;
+    color: #06c;
 }
 
 .img2-link a, .img4-link a, .img5-link a, .img6-link a {
@@ -1322,24 +1315,24 @@ button {
 
     .img1-title {
         font-size: 26px;
-        margin-left: 130px;
     }
 
     .img1-desc {
         font-size: 14px;
-        margin-left: 60px;
-        text-shadow: -2px -2px 4px white, 0 0 10px white;
     }
 
     .img1-link-container {
         margin-top: 20px;
-        margin-left: 150px;
-        gap: 10px;
+        gap: 20px;
     }
 
     .img1-link {
         font-size: 16px;
-        text-shadow: 1px 1px 2px black, 0 0 2px white;
+    }
+
+    .image1-wrapper {
+        width: 120%;
+        margin-left: -35px;
     }
 
     .movie-picture {
